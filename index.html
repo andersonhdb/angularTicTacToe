@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TicTacToe JS</title>
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+
+    <script src="node_modules/angular/angular.min.js"></script>
+
+    <!--MAIN MODULE-->
+    <script src="angular/app.js"></script>
+
+    <!--CONTROLLER-->
+    <script src="angular/controller/boardController.js"></script>
+
+
+</head>
+<body>
+
+<div class="board-wrapper" ng-controller="boardController">
+
+
+    <div class="board">
+        <div class="boardSquare" ng-click="markBoard(square)" ng-repeat="square in board">
+
+            <div class="mark">{{square.status}}</div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
